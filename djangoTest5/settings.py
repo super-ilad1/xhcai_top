@@ -26,7 +26,7 @@ SECRET_KEY = '+q*rc^iuzoa(zfymt(yp^^zp-89=kk(r^8*yr68b0qhcjbf&64'
 if not "-" in socket.gethostname():
     DEBUG = False
 else:
-    DEBUG = True
+    DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -123,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 
-STATIC_URL = '/abc/'
+STATIC_URL = '/static/'
 
 
 
