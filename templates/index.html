@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ilad的项目后花园</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand " href="#"></a>
+    <a class="navbar-brand" href="#"><img class="brand_image" src="/abc/brand_icon.png" alt="">ilad的项目后花园</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container-fluid ml-4" id="vue_test">
+
+    <card :title="'Live Template Management'" :subtitle="'一款基于Pycharm的Livetemplate模板管理工具'"
+          :url="'https://github.com/super-ilad1/LivetemplateManage'"></card>
+    <card :title="'Amzon scrapy'" :subtitle="'亚马逊采集工具'" :url="'https://github.com/super-ilad1/Amazon-scrape'"></card>
+    <card :title="'其他项目正在开发中。。。'" :subtitle="'请前往Github了解更多'" :url="'https://github.com/super-ilad1'"></card>
+
+
+</div>
+<template id="card">
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="card p-3">
+                <div class="card-body">
+                    <h5 class="card-title" v-text="title"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted" v-text="subtitle"></h6>
+                    <p class="card-text"><span>GitHub地址:</span><a class="ml-2" :href="url" v-text="url"></a></p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</template>
+
+<div class="container">
+    <div class="d-flex justify-content-center my-4">
+        <a href="www.beian.miit.gov.cn" class="col-2 text-primary">湘ICP备20002697号</a>
+    </div>
+</div>
+<script type="text/javascript" src="/abc/bundle.js"></script>
+<script type="text/javascript" src="/abc/1.bundle.js"></script></body>
+</html>

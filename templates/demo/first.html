@@ -1,0 +1,46 @@
+{% load process %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>1.test_list demo</h1>
+{% for  i  in test_list %}
+    <sapn>{{ i }}</sapn>
+{% endfor %}
+
+<h1>2.test_list2 demo</h1>
+{{ test_list2.0 }}
+{{ test_list2.1 }}
+
+<h1>3.test_list3 demo</h1>
+{{ test_list3.name }}
+{{ test_list3.age }}
+
+<h1>4.anchor demo</h1>
+<p><a href="/third/third">click to turn href="/third/third"</a></p>
+<a href="/second">click to turn to href="/second"</a>
+
+<h1>5.page 路由传输demo</h1>
+<a href="/first/123">click this turn to  href="/first/123</a>
+
+<h1>6.filter的demo</h1>
+<p>{{ text_demo|process }}</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
