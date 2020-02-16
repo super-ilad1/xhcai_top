@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-
+import socket
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,7 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+q*rc^iuzoa(zfymt(yp^^zp-89=kk(r^8*yr68b0qhcjbf&64'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if not "-" in socket.gethostname():
+    DEBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -119,9 +122,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+
 STATIC_URL = '/abc/'
+
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+if not "-" in socket.gethostname():
+    STATIC_ROOT=os.path.join(BASE_DIR, "static")
